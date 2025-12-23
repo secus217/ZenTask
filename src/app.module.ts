@@ -5,6 +5,12 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
+import { WorkspacesModule } from './workspaces/workspaces.module';
+import { WorkspaceMembersModule } from './workspace_members/workspace_members.module';
+import { BoardsModule } from './boards/boards.module';
+import { BoardMembersModule } from './board_members/board_members.module';
+import { ListsModule } from './lists/lists.module';
+import { CardsModule } from './cards/cards.module';
 
 @Module({
   imports: [
@@ -28,6 +34,12 @@ import { AuthModule } from './auth/auth.module';
     }),
     UsersModule,
     AuthModule,
+    WorkspacesModule,
+    WorkspaceMembersModule,
+    BoardsModule,
+    BoardMembersModule,
+    ListsModule,
+    CardsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
